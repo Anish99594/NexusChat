@@ -6,9 +6,10 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/core-app-template/',
+  base: './',
+  publicDir: 'public', // Ensures public assets are included
   build: {
-    outDir: 'build',
+    outDir: 'dist',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
